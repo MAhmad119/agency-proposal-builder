@@ -9,8 +9,8 @@
 <style>
 :root{
  --bg:#080d18;--panel:#101a2b;--panel2:#162238;--border:#263650;
- --text:#edf3ff;--muted:#91a1ba;--blue:#4388ff;--blue2:#2868df;
- --green:#20c997;--red:#ff6577;--input:#0c1525;--shadow:0 15px 40px #0003;
+ --text:#edf3ff;--muted:#91a1ba;--blue:#4388ff;--green:#20c997;
+ --red:#ff6577;--input:#0c1525;--shadow:0 15px 40px #0003;
 }
 body.light{
  --bg:#f1f5fb;--panel:#fff;--panel2:#f3f6fc;--border:#dce4f0;
@@ -46,7 +46,6 @@ h1{font-size:25px;margin:0 0 6px}
 .card{background:var(--panel);border:1px solid var(--border);border-radius:15px;padding:20px;box-shadow:var(--shadow);margin-bottom:17px;min-width:0}
 .cardHead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:17px}
 .cardHead h2{font-size:14px;margin:0}
-.sectionTitle{font-size:11px;letter-spacing:1.5px;color:#77aaff;font-weight:900;margin:25px 0 15px}
 .field{margin-bottom:14px}
 label{display:block;font-size:12px;font-weight:750;color:var(--muted);margin-bottom:7px}
 input,textarea,select{width:100%;padding:12px 13px;border-radius:10px;background:var(--input);border:1px solid var(--border);color:var(--text);outline:none;font-size:13px}
@@ -54,8 +53,6 @@ input:focus,textarea:focus,select:focus{border-color:var(--blue);box-shadow:0 0 
 textarea{min-height:90px;resize:vertical;line-height:1.6}
 input[type=file]{padding:9px}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.hint{color:var(--muted);font-size:11px;margin-top:6px}
 .templateGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
 .template{border:1px solid var(--border);border-radius:11px;background:var(--panel2);padding:12px;text-align:center;color:var(--text);font-size:12px;font-weight:800}
 .template.active{border:2px solid var(--blue);background:#4388ff16}
@@ -88,7 +85,6 @@ input[type=file]{padding:9px}
 .paper table{width:100%;border-collapse:collapse;font-size:10px;margin-top:10px}
 .paper th{background:#f1f5fb;text-align:left;color:#52627a}
 .paper td,.paper th{padding:10px 8px;border-bottom:1px solid #e5ebf3}
-.paper .totalRow td{font-weight:900;color:#1b2a42;font-size:12px}
 .paper .totalBox{text-align:right;margin-top:12px;font-size:11px;line-height:2;color:#65748a}
 .paper .totalBox strong{font-size:19px;color:#246de0}
 .paper .signature{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:55px}
@@ -108,33 +104,25 @@ input[type=file]{padding:9px}
 .paper.corporate .clientBox{border-left:4px solid #397cf2;border-radius:0}
 .paper.corporate .docSection h3{color:#235eae}
 .paper.corporate .totalBox strong{color:#235eae}
-.emptyState{padding:30px;text-align:center;color:var(--muted);font-size:13px}
 .page{display:none}
 .page.active{display:block}
 .pageCard{max-width:850px}
 .adSlot{border:1px dashed var(--border);border-radius:10px;padding:18px;text-align:center;color:var(--muted);font-size:10px;letter-spacing:1px;margin:20px 0}
+.hint{color:var(--muted);font-size:11px;margin-top:6px}
+.emptyState{padding:30px;text-align:center;color:var(--muted);font-size:13px}
 .toast{position:fixed;bottom:20px;right:20px;background:var(--green);color:#05251d;padding:12px 18px;border-radius:10px;font-size:13px;font-weight:800;display:none;z-index:30}
 .mobileMenu{display:none}
-@media(max-width:1000px){
- .workspace{grid-template-columns:1fr}
- .previewSticky{position:static}
- .paperWrap{max-height:none}
-}
+.contactLink{display:inline-block;background:#20c997;color:#05251d;text-decoration:none;padding:13px 18px;border-radius:10px;font-weight:800;font-size:13px;margin-top:10px}
+.contactLink:hover{filter:brightness(1.1)}
+@media(max-width:1000px){.workspace{grid-template-columns:1fr}.previewSticky{position:static}.paperWrap{max-height:none}}
 @media(max-width:700px){
  .topbar{height:auto;min-height:70px;padding:12px}
- .brand small{display:none}
- .topActions{gap:5px}
- .topActions .btn{padding:9px;font-size:11px}
+ .brand small{display:none}.topActions{gap:5px}.topActions .btn{padding:9px;font-size:11px}
  .layout{grid-template-columns:1fr}
  .sidebar{display:none;position:fixed;z-index:20;top:70px;bottom:0;width:245px;box-shadow:var(--shadow)}
- .sidebar.open{display:block}
- .mobileMenu{display:inline-block}
- .main{padding:15px}
- .welcome{align-items:flex-start}
- h1{font-size:21px}
- .card{padding:15px}
- .grid2{grid-template-columns:1fr}
- .grid3{grid-template-columns:1fr 1fr}
+ .sidebar.open{display:block}.mobileMenu{display:inline-block}
+ .main{padding:15px}.welcome{align-items:flex-start}h1{font-size:21px}
+ .card{padding:15px}.grid2{grid-template-columns:1fr}
  .paper{padding:23px 18px;min-height:700px}
  .paper .proposalTitle{font-size:25px}
  .paper.corporate .corporateHeader{padding:23px}
@@ -165,7 +153,7 @@ input[type=file]{padding:9px}
   <div>Agency Proposal Studio<small>AHMAD BUILDS · PRO EDITION</small></div>
  </div>
  <div class="topActions">
-  <button class="btn" onclick="toggleTheme()" title="Toggle theme">◐</button>
+  <button class="btn" onclick="toggleTheme()">◐</button>
   <button class="btn" onclick="saveDraft()">▣ Save</button>
   <button class="btn primary" onclick="exportPDF()">▤ Export PDF</button>
  </div>
@@ -182,7 +170,7 @@ input[type=file]{padding:9px}
  <div class="nav" onclick="showPage('about',this)">◈ &nbsp; About Us</div>
  <div class="nav" onclick="showPage('privacy',this)">♧ &nbsp; Privacy Policy</div>
  <div class="nav" onclick="showPage('terms',this)">▣ &nbsp; Terms of Use</div>
- <div class="nav" onclick="showPage('contact',this)">✉ &nbsp; Contact</div>
+ <div class="nav" onclick="showPage('contact',this)">✉ &nbsp; Contact Us</div>
  <div class="sideBottom">Create professional proposals for your clients.<br><br>Version 2.0<br>© AHMAD BUILDS</div>
 </aside>
 
@@ -192,11 +180,10 @@ input[type=file]{padding:9px}
   <div><h1>Proposal Workspace</h1><div class="subtitle">Build, customize and export client-ready proposals.</div></div>
   <button class="btn danger" onclick="resetForm()">↻ Reset</button>
  </div>
-
  <div class="workspace">
  <div>
   <div class="card">
-   <div class="cardHead"><h2>01 — Choose Your Design</h2><span class="hint">Live templates</span></div>
+   <div class="cardHead"><h2>01 — Choose Your Design</h2></div>
    <div class="templateGrid">
     <button class="template active" data-template="modern" onclick="setTemplate('modern')"><div class="sample"><i></i><i></i><i></i></div>Modern</button>
     <button class="template" data-template="minimal" onclick="setTemplate('minimal')"><div class="sample"><i></i><i></i><i></i></div>Minimal</button>
@@ -212,7 +199,7 @@ input[type=file]{padding:9px}
     <div class="field"><label>Email</label><input id="agencyEmail" placeholder="hello@example.com" oninput="updatePreview()"></div>
    </div>
    <div class="field"><label>Agency Address / Contact Details</label><textarea id="agencyContact" placeholder="City, Country | Phone number" oninput="updatePreview()"></textarea></div>
-   <div class="field"><label>Agency Logo (optional)</label><input type="file" id="logoFile" accept="image/png,image/jpeg,image/webp" onchange="loadLogo(event)"><div class="hint">PNG, JPG or WebP. Keep image reasonably small.</div></div>
+   <div class="field"><label>Agency Logo</label><input type="file" id="logoFile" accept="image/png,image/jpeg,image/webp" onchange="loadLogo(event)"><div class="hint">PNG, JPG or WebP. Keep image smaller than 1.2 MB.</div></div>
   </div>
 
   <div class="card">
@@ -254,7 +241,7 @@ Week 4 - Testing and handover</textarea></div>
   </div>
 
   <div class="card">
-   <div class="cardHead"><h2>06 — Pricing & Investment</h2><span class="hint">Automatic totals</span></div>
+   <div class="cardHead"><h2>06 — Pricing & Investment</h2></div>
    <div class="field"><label>Currency</label>
     <select id="currency" onchange="updatePreview()">
      <option value="USD">USD ($)</option><option value="PKR">PKR (Rs.)</option>
@@ -300,7 +287,7 @@ Final files are delivered after agreed payments are completed.</textarea></div>
  <div class="previewSticky">
   <div class="previewTop"><strong>LIVE DOCUMENT PREVIEW</strong><button class="btn" onclick="copyProposal()">Copy Text</button></div>
   <div class="paperWrap"><article id="paper" class="paper modern"></article></div>
-  <div class="adSlot">ADVERTISEMENT SPACE · PLACE YOUR APPROVED ADSENSE CODE HERE</div>
+  <div class="adSlot">ADVERTISEMENT SPACE · ADD APPROVED ADSENSE CODE HERE</div>
  </div>
  </div>
 </section>
@@ -321,12 +308,21 @@ Final files are delivered after agreed payments are completed.</textarea></div>
 
 <section class="page" id="page-guide">
  <div class="card pageCard"><h1>User Guide</h1>
- <p>1. Add your agency and client details.</p><p>2. Enter the project scope, objectives and deliverables.</p><p>3. Add milestones, dates and pricing items.</p><p>4. Choose Modern, Minimal or Corporate template.</p><p>5. Check the live preview and select Export PDF.</p><p>6. In the print dialog, choose Save as PDF.</p>
- <p><strong>Tip:</strong> Always review the document before sending it to a client.</p></div>
+ <p>1. Add your agency and client details.</p>
+ <p>2. Enter project scope, objectives and deliverables.</p>
+ <p>3. Add milestones, dates and pricing items.</p>
+ <p>4. Choose Modern, Minimal or Corporate template.</p>
+ <p>5. Check the live preview and select Export PDF.</p>
+ <p>6. In the print dialog, choose Save as PDF.</p>
+ <p><strong>Tip:</strong> Always review the document before sending it to a client.</p>
+ </div>
 </section>
 
 <section class="page" id="page-about">
- <div class="card pageCard"><h1>About Us</h1><p>Agency Proposal Studio Pro is a proposal-building utility by AHMAD BUILDS. It helps freelancers and agencies prepare structured project proposals and price estimates.</p><p>This tool is provided as a productivity aid. It is not a legal service or payment processor.</p></div>
+ <div class="card pageCard"><h1>About Us</h1>
+ <p>Agency Proposal Studio Pro is a proposal-building utility by AHMAD BUILDS. It helps freelancers and agencies prepare structured project proposals and price estimates.</p>
+ <p>This tool is provided as a productivity aid. It is not a legal service or payment processor.</p>
+ </div>
 </section>
 
 <section class="page" id="page-privacy">
@@ -335,7 +331,8 @@ Final files are delivered after agreed payments are completed.</textarea></div>
  <p><strong>Logo:</strong> An uploaded logo is used in the local document preview. It may be stored in a local draft if you save it.</p>
  <p><strong>External services:</strong> If you add analytics, advertising, fonts or other external services, update this policy to accurately explain their data practices.</p>
  <p><strong>Control:</strong> You can remove locally saved drafts using the draft controls or clear this site's browser data.</p>
- <p>This sample policy must be reviewed and updated to reflect the actual deployed website and applicable laws.</p></div>
+ <p>This sample policy must be reviewed and updated to reflect the actual deployed website and applicable laws.</p>
+ </div>
 </section>
 
 <section class="page" id="page-terms">
@@ -344,12 +341,24 @@ Final files are delivered after agreed payments are completed.</textarea></div>
  <p>Generated proposals are not legal advice, guaranteed contracts, tax advice or proof of payment.</p>
  <p>Users must ensure that prices, deadlines, scope, payment conditions and terms are accurate and agreed with their clients.</p>
  <p>Do not use the tool for unlawful, misleading or fraudulent purposes.</p>
- <p>These sample terms should be reviewed before public commercial use.</p></div>
+ <p>These sample terms should be reviewed before public commercial use.</p>
+ </div>
 </section>
 
 <section class="page" id="page-contact">
- <div class="card pageCard"><h1>Contact Us</h1><p>For feedback or support, contact AHMAD BUILDS.</p><p>Email: <strong>your-email@example.com</strong></p><p>Replace this placeholder with your real support email before publishing.</p></div>
+ <div class="card pageCard">
+  <h1>Contact Us</h1>
+  <p>For feedback, support or business inquiries, contact AHMAD BUILDS.</p>
+  <div style="margin-top:25px;padding:20px;background:var(--panel2);border:1px solid var(--border);border-radius:12px">
+   <div style="font-size:12px;color:var(--muted);font-weight:800">WHATSAPP SUPPORT</div>
+   <h2 style="margin:10px 0;font-size:23px">+92 308 9423733</h2>
+   <p style="color:var(--muted);font-size:12px">Chat with us for support, feedback and business inquiries.</p>
+   <a href="https://wa.me/923089423733" target="_blank" rel="noopener noreferrer" class="contactLink">Chat with us on WhatsApp →</a>
+  </div>
+  <p style="margin-top:22px"><strong>Brand:</strong> AHMAD BUILDS</p>
+ </div>
 </section>
+
 </main>
 </div>
 </div>
@@ -373,7 +382,8 @@ function money(n){
 }
 function showToast(message){
  const t=$('toast');t.textContent=message;t.style.display='block';
- clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>t.style.display='none',2400);
+ clearTimeout(showToast.timer);
+ showToast.timer=setTimeout(()=>t.style.display='none',2400);
 }
 function setTemplate(name){
  selectedTemplate=name;
@@ -381,7 +391,6 @@ function setTemplate(name){
  updatePreview();
 }
 function addLineItem(description='',amount=''){
- const id=++itemCounter;
  const row=document.createElement('div');row.className='lineItem';
  row.innerHTML=`<input class="itemDesc" placeholder="Service or deliverable" value="${esc(description)}" oninput="updatePreview()">
  <input class="itemAmount" type="number" min="0" step="0.01" placeholder="Amount" value="${esc(amount)}" oninput="updatePreview()">
@@ -471,10 +480,7 @@ function loadLogo(event){
  reader.onload=()=>{logoData=reader.result;updatePreview();showToast('Logo added to preview.');};
  reader.readAsDataURL(file);
 }
-function exportPDF(){
- updatePreview();
- window.print();
-}
+function exportPDF(){updatePreview();window.print()}
 function copyProposal(){
  const textContent=$('paper').innerText;
  if(navigator.clipboard&&navigator.clipboard.writeText){
@@ -499,7 +505,7 @@ function applyData(data){
  document.querySelectorAll('input[id],textarea[id],select[id]').forEach(el=>{
   if(el.id!=='logoFile'&&data[el.id]!==undefined)el.value=data[el.id];
  });
- $('lineItems').innerHTML='';itemCounter=0;
+ $('lineItems').innerHTML='';
  (data.items||[]).forEach(x=>addLineItem(x.description,x.amount));
  if(!(data.items||[]).length)addLineItem('Website design',1500);
  document.querySelectorAll('.template').forEach(b=>b.classList.toggle('active',b.dataset.template===selectedTemplate));
@@ -560,7 +566,10 @@ function showPage(page,nav){
  window.scrollTo({top:0,behavior:'smooth'});
 }
 function toggleMenu(){$('sidebar').classList.toggle('open')}
-function toggleTheme(){document.body.classList.toggle('light');localStorage.setItem('agencyStudioTheme',document.body.classList.contains('light')?'light':'dark')}
+function toggleTheme(){
+ document.body.classList.toggle('light');
+ localStorage.setItem('agencyStudioTheme',document.body.classList.contains('light')?'light':'dark');
+}
 if(localStorage.getItem('agencyStudioTheme')==='light')document.body.classList.add('light');
 addLineItem('Website design',1500);
 addLineItem('Website development',1000);
